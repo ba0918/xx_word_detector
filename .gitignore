@@ -1,0 +1,6 @@
+/dist/
+/example/
+/bundle/
+/node_modules/
+*.log*
+yarn.lock
