@@ -11,13 +11,17 @@
     "es6": true
   },
   "extends": [
-    "prettier"
+    "plugin:flowtype/recommended",
+    "prettier",
+    "prettier/flowtype"
   ],
   "plugins": [
-    "prettier"
+    "prettier",
+    "flowtype"
   ],
   "rules": {
     "prettier/prettier": ["error", {
+        "printWidth": 160,
         "trailingComma": "none",
         "singleQuote": true,
         "semi": false
