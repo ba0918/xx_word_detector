@@ -21,7 +21,6 @@
   ],
   "rules": {
     "prettier/prettier": ["error", {
-        "printWidth": 160,
         "trailingComma": "none",
         "singleQuote": true,
         "semi": false
