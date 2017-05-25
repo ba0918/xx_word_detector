@@ -45,8 +45,7 @@ export default class HalfWidthToFullWidthKanaConversionFilter
     const ret: number[] = []
     for (let i = 0; i < input.length; i++) {
       const code = input.charCodeAt(i)
-      const isPadable =
-        fullVoicedConsonantMap.hasOwnProperty(code) && i + 1 < input.length
+      const isPadable = d.hasOwnProperty(code) && i + 1 < input.length
 
       let nextSkip = false
       if (isPadable) {
