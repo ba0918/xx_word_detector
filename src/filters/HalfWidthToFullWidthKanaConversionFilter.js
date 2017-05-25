@@ -1,6 +1,6 @@
 /* @flow */
 
-import { StringFilterable } from './Filterable'
+import type { StringFilterable } from './Filterable'
 
 // prettier-ignore
 const map: { [x: number]: number } = {
