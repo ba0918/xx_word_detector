@@ -7,7 +7,7 @@ export default class FilterChain<T> implements Filterable<T> {
     this.filters = filters
   }
 
-  add(filter: Filterable<T>) {
+  add(filter: Filterable<T>): this {
     this.filters.push(filter)
     return this
   }
