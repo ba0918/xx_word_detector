@@ -2,6 +2,8 @@
   "name": "@ba0918/xx_word_detector",
   "description": "detect NG word from text",
   "version": "0.0.2",
+  "repository": "git@github.com:ba0918/xx_word_detector.git",
+  "author": "ba0918 <pub.dev.delusions@gmail.com>",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
@@ -42,7 +44,5 @@
     "require": [
       "babel-register"
     ]
-  },
-  "repository": "git@github.com:ba0918/xx_word_detector.git",
-  "author": "ba0918 <pub.dev.delusions@gmail.com>"
+  }
 }
