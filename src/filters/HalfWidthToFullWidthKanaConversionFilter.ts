@@ -1,8 +1,5 @@
-/* @flow */
+import { StringFilterable } from './Filterable'
 
-import type { StringFilterable } from './Filterable'
-
-// prettier-ignore
 const map: { [x: number]: number } = {
   0xff61: 0x3002, 0xff62: 0x300c, 0xff63: 0x300d, 0xff64: 0x3001,
   0xff65: 0x30fb, 0xff67: 0x30a1, 0xff68: 0x30a3, 0xff69: 0x30a5,
@@ -22,7 +19,6 @@ const map: { [x: number]: number } = {
   0xff6d: 0x30e5, 0xff6e: 0x30e7, 0xff6f: 0x30c3
 }
 
-// prettier-ignore
 const d: { [x: number]: number } = {
   0xff76: 0x30ac, 0xff77: 0x30ae, 0xff78: 0x30b0, 0xff79: 0x30b2,
   0xff7a: 0x30b4, 0xff7b: 0x30b6, 0xff7c: 0x30b8, 0xff7d: 0x30ba,
@@ -31,7 +27,6 @@ const d: { [x: number]: number } = {
   0xff8b: 0x30d3, 0xff8c: 0x30d6, 0xff8d: 0x30d9, 0xff8e: 0x30dc
 }
 
-// prettier-ignore
 const h: { [x: number]: number } = {
   0xff8a: 0x30d1,0xff8b: 0x30d4,0xff8c: 0x30d7, 0xff8d: 0x30da, 0xff8e: 0x30dd
 }
@@ -39,8 +34,7 @@ const h: { [x: number]: number } = {
 const FULL_VOICED_CONSONANT_MARK = 0xff9e
 const HALF_VOICED_CONSONANT_MARK = 0xff9f
 
-export default class HalfWidthToFullWidthKanaConversionFilter
-  implements StringFilterable {
+export default class HalfWidthToFullWidthKanaConversionFilter implements StringFilterable {
   execute(input: string): string {
     const ret: number[] = []
     for (let i = 0; i < input.length; i++) {

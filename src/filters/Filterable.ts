@@ -1,4 +1,3 @@
-/* @flow */
 
 export interface Filterable<T> {
   execute(input: T): T

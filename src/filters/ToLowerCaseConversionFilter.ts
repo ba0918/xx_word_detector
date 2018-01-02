@@ -1,6 +1,4 @@
-/* @flow */
-
-import type { StringFilterable } from './Filterable'
+import { StringFilterable } from './Filterable'
 
 export default class ToLowerCaseConversionFilter implements StringFilterable {
   execute(input: string): string {
