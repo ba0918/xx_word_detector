@@ -1,11 +1,8 @@
-import test from 'ava'
-import FullWidthToHalfWidthAlphabetsConversionFilter
-  from '../../src/filters/FullWidthToHalfWidthAlphabetsConversionFilter'
+import FullWidthToHalfWidthAlphabetsConversionFilter from '../FullWidthToHalfWidthAlphabetsConversionFilter'
 
-test(t => {
+it("HalfWidthToFullWidthKanaConversionFilter#execute", () => {
   const input = `０１２３４５６７８９ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～`
-  const encoded = `0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!"#$%&'()*+,-./:;<=>?@[\\]^_\`{|}~`
-
+  const converted = `0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!"#$%&'()*+,-./:;<=>?@[\\]^_\`{|}~`
   const filter = new FullWidthToHalfWidthAlphabetsConversionFilter()
-  t.is(encoded, filter.execute(input))
+  expect(filter.execute(input)).toBe(converted)
 })

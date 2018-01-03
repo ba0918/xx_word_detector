@@ -8,11 +8,22 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p .",
-    "test": "tsc -p ./test && ava && rimraf .test-compiled"
+    "test": "jest"
+  },
+  "jest": {
+    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    },
+    "testMatch": [
+      "**/__tests__/*.test.(ts|tsx)"
+    ]
   },
   "devDependencies": {
+    "@types/jest": "^22.0.0",
     "ava": "^0.24.0",
     "cross-env": "^5.0.0",
+    "jest": "^22.0.4",
     "rimraf": "^2.6.1",
     "typescript": "^2.6.2"
   }

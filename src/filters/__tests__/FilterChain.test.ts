@@ -1,11 +1,8 @@
-import test from 'ava'
-import Filter from '../../src/filters/'
+import Filter from '../'
 
-test(t => {
-  // TODO
+it("FilterChain#execute", () => {
   const input = ` ｱｲｳｴｵ  ｓ　　dＨｆｚｚｚ 　`
-  const encoded = `あいうえおsdhfzzz`
-
+  const converted = `あいうえおsdhfzzz`
   const filter = new Filter.FilterChain([
     new Filter.SpaceDeletionFilter(),
     new Filter.HalfWidthToFullWidthKanaConversionFilter(),
@@ -13,5 +10,5 @@ test(t => {
     new Filter.FullWidthToHalfWidthAlphabetsConversionFilter(),
     new Filter.ToLowerCaseConversionFilter()
   ])
-  t.is(encoded, filter.execute(input))
+  expect(filter.execute(input)).toBe(converted)
 })

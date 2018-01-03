@@ -4,4 +4,4 @@
 /node_modules/
 *.log*
 yarn.lock
-/.test-compiled
+/lib/
